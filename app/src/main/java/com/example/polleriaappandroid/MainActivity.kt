@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var mActiveFragment: Fragment
     private lateinit var mFragmentManager: FragmentManager
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mBinding = ActivityMainBinding.inflate(layoutInflater)
@@ -63,8 +64,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-
-
     }
+
 
 }
