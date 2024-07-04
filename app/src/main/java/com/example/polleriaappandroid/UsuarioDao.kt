@@ -19,4 +19,7 @@ interface UsuarioDao {
 
     @Delete
     fun deleteUsuario(usuario: Usuario)
+
+    @Query("SELECT * FROM usuarios")
+    fun getAllUsuarios(): List<Usuario>
 }
