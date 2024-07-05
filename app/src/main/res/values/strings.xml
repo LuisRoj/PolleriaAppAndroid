@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">PolleriaAppAndroid</string>
     <string name="home_title">Inicio</string>
-    <string name="home_add">Crear Pedido</string>
+    <string name="home_add">Crear Producto</string>
     <string name="home_profile">Perfil</string>
 
     <!-- TODO: Remove or change this placeholder text -->
