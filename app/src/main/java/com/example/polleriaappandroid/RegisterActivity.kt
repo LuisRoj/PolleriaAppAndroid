@@ -5,10 +5,12 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.polleriaappandroid.databinding.ActivityRegisterBinding
 import com.google.firebase.auth.FirebaseAuth
+import java.util.concurrent.Executors
 
 class RegisterActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRegisterBinding
     private lateinit var auth: FirebaseAuth
+    private val executor = Executors.newSingleThreadExecutor()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,12 +50,22 @@ class RegisterActivity : AppCompatActivity() {
                         password = password.hashCode().toString(),
                         estado = true
                     )
-                    PolleriaApplication.database.usuarioDao().insertUsuario(user)
-                    Toast.makeText(this, "Registro exitoso.", Toast.LENGTH_SHORT).show()
-                    finish() // Cierra la actividad y vuelve a LoginActivity
+
+                    executor.execute {
+                        PolleriaApplication.database.usuarioDao().insertUsuario(user)
+                        runOnUiThread {
+                            Toast.makeText(this@RegisterActivity, "Registro exitoso.", Toast.LENGTH_SHORT).show()
+                            finish() // Cierra la actividad y vuelve a LoginActivity
+                        }
+                    }
                 } else {
                     Toast.makeText(this, "Error en el registro: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
                 }
             }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        executor.shutdown()
     }
 }
