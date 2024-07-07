@@ -31,48 +31,95 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvNombre" />
 
+
+    <TextView
+        android:id="@+id/txtCategoria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/common_padding_default"
+        android:layout_marginTop="15dp"
+
+        android:text="Categoria: "
+        app:layout_constraintEnd_toStartOf="@+id/tvCategoria"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgPhoto" />
+
     <TextView
         android:id="@+id/tvCategoria"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/common_padding_default"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtCategoria"
         app:layout_constraintTop_toBottomOf="@+id/imgPhoto"
         tools:text="Categoria" />
+
+
+    <TextView
+        android:id="@+id/txtUnidadMed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Cantidad: "
+        app:layout_constraintEnd_toStartOf="@+id/tvCategoria"
+        app:layout_constraintHorizontal_bias="0.447"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtCategoria" />
 
     <TextView
         android:id="@+id/tvUnidadmedida"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/common_padding_default"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="15dp"
-        app:layout_constraintTop_toBottomOf="@+id/tvCategoria"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toEndOf="@+id/txtUnidadMed"
+        app:layout_constraintTop_toTopOf="@+id/tvCategoria"
         tools:text="Unidad de medida" />
+
+    <TextView
+        android:id="@+id/txtPresentacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="84dp"
+
+        android:text="Presentacion: "
+        app:layout_constraintEnd_toStartOf="@+id/tvCategoria"
+        app:layout_constraintTop_toTopOf="@+id/txtUnidadMed" />
 
     <TextView
         android:id="@+id/tvPresentacion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/common_padding_default"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="44dp"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="15dp"
-        app:layout_constraintTop_toBottomOf="@+id/tvUnidadmedida"
+        app:layout_constraintHorizontal_bias="0.546"
+        app:layout_constraintStart_toEndOf="@+id/txtPresentacion"
+        app:layout_constraintTop_toTopOf="@+id/tvUnidadmedida"
         tools:text="Presentacion" />
+
+    <TextView
+        android:id="@+id/txtPrecio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Precio S/: "
+        app:layout_constraintEnd_toStartOf="@+id/tvCategoria"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtPresentacion" />
 
     <TextView
         android:id="@+id/tvPrecio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/common_padding_default"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="15dp"
-        app:layout_constraintTop_toBottomOf="@+id/tvPresentacion"
+        app:layout_constraintStart_toEndOf="@+id/txtPrecio"
+        app:layout_constraintTop_toTopOf="@+id/tvPresentacion"
         tools:text="Precio" />
 
     <com.google.android.material.checkbox.MaterialCheckBox
@@ -84,5 +131,6 @@
         android:button="@drawable/ic_thumb_up"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
