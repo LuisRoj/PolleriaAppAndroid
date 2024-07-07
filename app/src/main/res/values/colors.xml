@@ -11,8 +11,13 @@
 
     <color name="gray">#D2D2D2</color>
     <color name="green">#38CA67</color>
+    <color name="celeste">#6177EA</color>
     <color name="orange">#F7AB43</color>
     <color name="purple">#8E0584</color>
     <color name="gold">#DDDF2E</color>
     <color name="white_t">#99FFFFFF</color>
+
+    <color name="red">#8E0505</color>
+
+
 </resources>

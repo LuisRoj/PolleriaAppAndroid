@@ -6,28 +6,50 @@
     android:orientation="vertical"
     android:padding="16dp">
 
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Agregar Usuario"
+        android:textSize="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="100dp"
+        />
+
     <EditText
         android:id="@+id/etUsername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/style_et_bg"
         android:hint="Username" />
 
     <EditText
         android:id="@+id/etNombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/style_et_bg"
         android:hint="Nombre" />
 
     <EditText
         android:id="@+id/etApellido"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/style_et_bg"
         android:hint="Apellido" />
 
     <EditText
         android:id="@+id/etEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/style_et_bg"
         android:hint="Email"
         android:inputType="textEmailAddress" />
 
@@ -35,18 +57,28 @@
         android:id="@+id/etTelefono"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/style_et_bg"
+        android:inputType="phone"
         android:hint="Teléfono" />
 
     <EditText
         android:id="@+id/etDireccion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/style_et_bg"
         android:hint="Dirección (Opcional)" />
 
     <EditText
         android:id="@+id/etPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/style_et_bg"
         android:hint="Password"
         android:inputType="textPassword" />
 
@@ -54,6 +86,9 @@
         android:id="@+id/btnAddUsuario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:backgroundTint="@color/orange"
+        android:padding="10dp"
         android:text="Agregar Usuario" />
 
     <androidx.recyclerview.widget.RecyclerView
